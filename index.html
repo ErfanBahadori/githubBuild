@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header class="bg-gray-800 text-white">
+      <nav class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="text-xl font-bold">Logo</div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-4">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">About</a>
+            <a href="#" class="hover:text-gray-300">Services</a>
+            <a href="#" class="hover:text-gray-300">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden" onclick="toggleMenu()">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2">
+          <a href="#" class="block py-2 hover:text-gray-300">Home</a>
+          <a href="#" class="block py-2 hover:text-gray-300">About</a>
+          <a href="#" class="block py-2 hover:text-gray-300">Services</a>
+          <a href="#" class="block py-2 hover:text-gray-300">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img
+            src="https://picsum.photos/300/200"
+            alt="Card image"
+            class="w-full h-48 object-cover rounded mb-4"
+          />
+          <h2 class="text-xl font-bold mb-4">Card Title</h2>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+          <button
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img
+            src="https://picsum.photos/300/201"
+            alt="Card image"
+            class="w-full h-48 object-cover rounded mb-4"
+          />
+          <h2 class="text-xl font-bold mb-4">Card Title</h2>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+          <button
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img
+            src="https://picsum.photos/300/202"
+            alt="Card image"
+            class="w-full h-48 object-cover rounded mb-4"
+          />
+          <h2 class="text-xl font-bold mb-4">Card Title</h2>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+          <button
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-gray-800 text-white mt-8">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">About Us</h3>
+            <p class="text-gray-400">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>123 Street Name</li>
+              <li>City, Country</li>
+              <li>Phone: (123) 456-7890</li>
+              <li>Email: info@example.com</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+              <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+              <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
